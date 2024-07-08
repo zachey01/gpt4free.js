@@ -38,11 +38,21 @@ jobs:
           path: dist/
 
       - name: Commit build artifacts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git fetch origin main
+          git checkout -b build-artifacts-branch
           git add dist
           git commit -m 'Add build artifacts'
-          git push
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
+          git push origin build-artifacts-branch
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Add build artifacts"
+          branch: build-artifacts-branch
+          delete-branch: true
