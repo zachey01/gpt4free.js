@@ -67,7 +67,7 @@ bun add gpt4js
 ### Using CDN
 
 ```html
-<script src="https://unpkg.com/gpt4jss"></script>
+<script src="https://unpkg.com/gpt4js"></script>
 ```
 
 <a id="examples"></a>

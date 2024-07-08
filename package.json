@@ -6,7 +6,7 @@
   "type": "module",
   "exports": {
     ".": {
-      "unpkg": "./dist/GPT4js.min.js"
+      "unpkg": "./dist/gpt4js.min.js"
     }
   },
   "devDependencies": {
