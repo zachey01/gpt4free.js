@@ -203,6 +203,7 @@ const options = {
 | davinci-002            | `Aryahcr`                 |
 | gemini-pro             | `Nextway`                 |
 | gpt-4o-free            | `Nextway`                 |
+| gemini-nano            | `Chrome`                  |
 
 <a id="image-generation"></a>
 
