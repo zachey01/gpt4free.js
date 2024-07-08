@@ -1,7 +1,7 @@
-import GPT4Free from "./src/providers.js";
+import GPT4js from "./src/providers.js";
 
 if (typeof window !== "undefined") {
-  window.GPT4Free = GPT4Free;
+  window.GPT4js = GPT4js;
 }
 
-export default GPT4Free;
+export default GPT4js;

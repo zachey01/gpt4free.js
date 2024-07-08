@@ -10,7 +10,7 @@ const browserConfig = {
   target: "web",
   entry: "./index.js",
   output: {
-    filename: "gpt4free.min.js",
+    filename: "gpt4js.min.js",
     path: path.resolve(__dirname, "dist"),
   },
   module: {

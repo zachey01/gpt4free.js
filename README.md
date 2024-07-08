@@ -1,6 +1,6 @@
-# GPT4Free.js 🔮
+# GPT4js 🔮
 
-GPT4Free.js is a package that simplifies interaction with various AI models, eliminating the need for an API Key or any other authorization method to access these chat completions and image generation models.
+GPT4js is a package that simplifies interaction with various AI models, eliminating the need for an API Key or any other authorization method to access these chat completions and image generation models.
 
 This package can be used in Node.js or Browser environments.
 
@@ -43,7 +43,7 @@ This package can be used in Node.js or Browser environments.
 ### Using NPM
 
 ```sh
-npm install gpt4free.js
+npm install gpt4js
 ```
 
 <a id="using-yarn"></a>
@@ -51,7 +51,7 @@ npm install gpt4free.js
 ### Using Yarn
 
 ```sh
-yarn add gpt4free.js
+yarn add gpt4js
 ```
 
 <a id="using-bun"></a>
@@ -59,7 +59,7 @@ yarn add gpt4free.js
 ### Using Bun
 
 ```sh
-bun add gpt4free.js
+bun add gpt4js
 ```
 
 <a id="using-cdn"></a>
@@ -67,7 +67,7 @@ bun add gpt4free.js
 ### Using CDN
 
 ```html
-<script src="https://unpkg.com/gpt4free"></script>
+<script src="https://unpkg.com/gpt4jss"></script>
 ```
 
 <a id="examples"></a>
@@ -98,7 +98,7 @@ const options = {
 };
 
 (async () => {
-  const provider = GPT4Free.createProvider(options.provider);
+  const provider = GPT4js.createProvider(options.provider);
   try {
     const text = await provider.chatCompletion(messages, options);
     console.log(text);
@@ -127,7 +127,7 @@ const options = {
 };
 
 (async () => {
-  const provider = GPT4Free.createProvider(options.provider);
+  const provider = GPT4js.createProvider(options.provider);
   try {
     const text = await provider.chatCompletion(messages, options);
     console.log(text);
@@ -264,7 +264,7 @@ const options = {
 };
 
 (async () => {
-  const provider = GPT4Free.createProvider(options.provider);
+  const provider = GPT4js.createProvider(options.provider);
   try {
     const text = await provider.chatCompletion(messages, options);
     console.log(text);

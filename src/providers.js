@@ -7,7 +7,7 @@ import ChromeProvider from "./Providers/ChatCompletion/Chrome.js";
 import DALLE2Provider from "./Providers/ImageGeneration/DALLE.js";
 import StableDiffusionProvider from "./Providers/ImageGeneration/StableDiffusion.js";
 
-class GPT4Free {
+class GPT4js {
   static createProvider(providerName) {
     switch (providerName) {
       case "Aryahcr":
@@ -28,4 +28,4 @@ class GPT4Free {
   }
 }
 
-export default GPT4Free;
+export default GPT4js;
