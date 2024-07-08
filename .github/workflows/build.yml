@@ -31,11 +31,18 @@ jobs:
       - name: Run build
         run: npm run build
 
-      - name: Debug. List files in the dist directory
-        run: ls -la dist
-
       - name: Upload build artifacts
         uses: actions/upload-artifact@v2
         with:
           name: build-artifacts
           path: dist/
+
+      - name: Commit build artifacts
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add dist
+          git commit -m 'Add build artifacts'
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
