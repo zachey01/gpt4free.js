@@ -31,6 +31,12 @@ jobs:
       - name: Run build
         run: npm run build
 
+      - name: Debug: List files in the current directory
+        run: ls -la
+
+      - name: Debug: List files in the dist directory
+        run: ls -la dist
+
       - name: Upload build artifacts
         uses: actions/upload-artifact@v2
         with:
