@@ -31,8 +31,6 @@ This package can be used in Node.js or Browser environments.
   - [Webpack](#webpack)
   - [Bun](#bun)
 - [🤝 Contribute](#contribute)
-- [💬 Chat Provider Example](#chat-provider-example)
-- [🌆 Image Provider Example](#image-provider-example)
 
 <a id="installation"></a>
 
