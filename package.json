@@ -1,6 +1,6 @@
 {
   "name": "gpt4js",
-  "version": "1.5.11",
+  "version": "1.5.12",
   "description": "Simplifies interaction with various AI models, eliminating the need for an API Key or any other authorization method to access these chat completions and image generation models.",
   "main": "index.cjs",
   "module": "index.js",
