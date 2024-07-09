@@ -326,6 +326,8 @@ Running: `npm test`
 
 If you'd like to contribute to this project, you can do so directly on [GitHub](https://github.com/zachey01/gpt4free.js/g4f-ts). Additionally, if you encounter any errors that hinder your use of any project functionality, please [report them here](https://github.com/zachey01/gpt4free.js/issues). Your feedback helps our community access AI tools freely!
 
+----
+
 <center>
   <div align="center">
     <img src="https://github.com/zachey01/gpt4free.js/assets/63107653/a605f58f-1090-4f88-b3fc-30929b410404" alt="logo" width="300"/>
