@@ -1,0 +1,5 @@
+LICENSE
+/tests/
+webpack.config.js
+/.github/
+/node_modules/
