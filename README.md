@@ -27,6 +27,7 @@ This package can be used in Node.js or Browser environments.
 - [🧠 Google Chrome AI](#google-chrome-ai)
   - [Setting Browser](#setting-browser)
   - [Simple Usage](#simple-usage)
+- [🗃️ GUI](#gui)
 - [🚧 Building](#building)
   - [Webpack](#webpack)
   - [Bun](#bun)
@@ -279,6 +280,12 @@ const options = {
   }
 })();
 ```
+
+<a id="gui"></a>
+
+# 🗃️ GUI
+
+Running: `npx gpt4js <port>`
 
 <a id="building"></a>
 
