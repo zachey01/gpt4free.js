@@ -2,7 +2,8 @@
   "name": "gpt4js",
   "version": "1.3.0",
   "description": "Simplifies interaction with various AI models, eliminating the need for an API Key or any other authorization method to access these chat completions and image generation models.",
-  "main": "index.js",
+  "main": "./dist/gpt4js.min.js",
+  "module": "index.js",
   "type": "module",
   "devDependencies": {
     "babel-loader": "^9.1.3",
