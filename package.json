@@ -26,7 +26,8 @@
     "build": "npx webpack --mode=production",
     "dev": "npx webpack serve",
     "build:bun": "bun build index.js --minify --outdir ./dist --target browser",
-    "dev:bun": "bun build index.js --minify --outdir ./dist --target browser --watch"
+    "dev:bun": "bun build index.js --minify --outdir ./dist --target browser --watch",
+    "test": "npx jest --config jest.config.js"
   },
   "repository": {
     "type": "git",
