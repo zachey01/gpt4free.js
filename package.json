@@ -29,5 +29,16 @@
   "bugs": {
     "url": "https://github.com/zachey01/gpt4free.js/issues"
   },
-  "homepage": "https://github.com/zachey01/gpt4free.js#readme"
+  "homepage": "https://github.com/zachey01/gpt4free.js#readme",
+  "keywords": [
+    "nodejs",
+    "gemini",
+    "bun",
+    "gpt-3",
+    "gpt-4",
+    "chatgpt",
+    "gpt4free",
+    "ollama",
+    "ollama-api"
+  ]
 }
