@@ -6,7 +6,6 @@ import webpack from "webpack";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Browser configuration
 const browserConfig = {
   target: "web",
   entry: "./index.js",
@@ -31,28 +30,4 @@ const browserConfig = {
   },
 };
 
-// CommonJS configuration
-const commonJsConfig = {
-  target: "node",
-  entry: "./index.js",
-  output: {
-    filename: "gpt4js.cjs",
-    path: path.resolve(__dirname, "dist"),
-    library: {
-      type: "commonjs2",
-    },
-  },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-        },
-      },
-    ],
-  },
-};
-
-export default [browserConfig, commonJsConfig];
+export default browserConfig;
