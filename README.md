@@ -4,6 +4,12 @@ GPT4js is a package that simplifies interaction with various AI models, eliminat
 
 This package can be used in Node.js or Browser environments.
 
+![Static Badge](https://img.shields.io/badge/Zachey-GPT4js-GPT4js)
+![GitHub top language](https://img.shields.io/github/languages/top/zachey01/gpt4free.js)
+![GitHub](https://img.shields.io/github/license/zachey01/gpt4free.js)
+![GitHub Repo stars](https://img.shields.io/github/stars/zachey01/gpt4free.js)
+![GitHub issues](https://img.shields.io/github/issues/zachey01/gpt4free.js)
+
 ## 📚 Table of Contents
 
 - [🛠️ Installation](#installation)
@@ -286,7 +292,6 @@ const options = {
 # 🗃️ GUI
 
 Running: `npx gpt4js <port>`
-
 
 ![output-onlinetools](https://github.com/zachey01/gpt4free.js/assets/63107653/daa66f93-e32c-4bc7-8157-b4e41815ad5d)
 
