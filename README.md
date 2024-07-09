@@ -34,6 +34,7 @@ This package can be used in Node.js or Browser environments.
   - [Setting Browser](#setting-browser)
   - [Simple Usage](#simple-usage)
 - [🗃️ GUI](#gui)
+- [🧪 Testing](#testing)
 - [🚧 Building](#building)
   - [Webpack](#webpack)
   - [Bun](#bun)
@@ -294,6 +295,12 @@ const options = {
 Running: `npx gpt4js <port>`
 
 ![output-onlinetools](https://github.com/zachey01/gpt4free.js/assets/63107653/daa66f93-e32c-4bc7-8157-b4e41815ad5d)
+
+<a id="testing"></a>
+
+# 🧪 Testing
+
+Running: `npm test`
 
 <a id="building"></a>
 
