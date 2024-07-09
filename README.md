@@ -91,6 +91,13 @@ With the `chatCompletion` function, you can obtain a textual response to a conve
 It will capture the messages and the context, and any provider will respond with a string.
 
 ```js
+// CommonJS
+const getGPT4js = require("gpt4js");
+const GPT4js = await getGPT4js();
+// ESM
+import GPT4js from "gpt4js";
+// In browsers use <script> tag
+
 const messages = [{ role: "user", content: "hi!" }];
 const options = {
   provider: "Nextway",
