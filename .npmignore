@@ -3,3 +3,5 @@ LICENSE
 webpack.config.js
 /.github/
 /node_modules/
+.npmrc
+jest.config.js
