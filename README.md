@@ -287,6 +287,9 @@ const options = {
 
 Running: `npx gpt4js <port>`
 
+
+![output-onlinetools](https://github.com/zachey01/gpt4free.js/assets/63107653/daa66f93-e32c-4bc7-8157-b4e41815ad5d)
+
 <a id="building"></a>
 
 # 🚧 Building
