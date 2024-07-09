@@ -209,6 +209,7 @@ const options = {
 | gemini-pro             | `Nextway`                 |
 | gpt-4o-free            | `Nextway`                 |
 | gemini-nano            | `Chrome`                  |
+| All Ollama models      | `Ollama`                  |
 
 <a id="image-generation"></a>
 
