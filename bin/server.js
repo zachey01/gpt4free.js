@@ -2,14 +2,9 @@
 
 import http from "http";
 import { promises as fs } from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 const PORT = process.argv[2] || 3000;
-const filePath = "./gui/index.html";
+const filePath = "./src/GUI/index.html";
 
 const server = http.createServer(async (req, res) => {
   console.log(`Request received: ${req.method} ${req.url}`);
