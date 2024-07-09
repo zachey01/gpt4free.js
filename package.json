@@ -29,6 +29,9 @@
   "bugs": {
     "url": "https://github.com/zachey01/gpt4free.js/issues"
   },
+  "bin": {
+    "gpt4js": "./bin/server.js"
+  },
   "homepage": "https://github.com/zachey01/gpt4free.js#readme",
   "keywords": [
     "nodejs",
