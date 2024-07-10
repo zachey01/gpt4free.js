@@ -1,5 +1,8 @@
 # GPT4js 🔮
 
+[🇺🇸](https://github.com/zachey01/gpt4free.js/blob/main/README.md)
+[🇷🇺](https://github.com/zachey01/gpt4free.js/blob/main/README-RU.md)
+
 GPT4js is a package that simplifies interaction with various AI models, eliminating the need for an API Key or any other authorization method to access these chat completions and image generation models.
 
 This package can be used in Node.js or Browser environments.
