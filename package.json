@@ -42,7 +42,7 @@
     "url": "https://github.com/zachey01/gpt4free.js/issues"
   },
   "bin": {
-    "gpt4js": "./src/bin/server.js"
+    "gpt4js": "./src/bin/main.js"
   },
   "homepage": "https://github.com/zachey01/gpt4free.js#readme",
   "keywords": [

@@ -33,7 +33,7 @@ This package can be used in Node.js or Browser environments.
 - [🧠 Google Chrome AI](#google-chrome-ai)
   - [Setting Browser](#setting-browser)
   - [Simple Usage](#simple-usage)
-- [🗃️ GUI](#gui)
+- [⌨️ CLI](#cli)
 - [🧪 Testing](#testing)
 - [🚧 Building](#building)
   - [Webpack](#webpack)
@@ -131,7 +131,7 @@ You can provide your own instructions for the conversation before it starts usin
 
 ```js
 const messages = [
-  { role: "system", content: "You're an expert bot in poetry." },
+  { role: "system", content: "You're an expert bot in programming." },
   { role: "user", content: "Hi, write me something." },
 ];
 const options = {
@@ -288,13 +288,15 @@ const options = {
 })();
 ```
 
-<a id="gui"></a>
+<a id="cli"></a>
 
-# 🗃️ GUI
+# ⌨️ CLI
 
-Running: `npx gpt4js <port>`
+Running GUI: `npx gpt4js --gui --port <port>`
 
 ![output-onlinetools](https://github.com/zachey01/gpt4free.js/assets/63107653/daa66f93-e32c-4bc7-8157-b4e41815ad5d)
+
+Usage: `npx gpt4js --model <model> --provider <provider> --prompt <prompt>`
 
 <a id="testing"></a>
 
