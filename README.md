@@ -1,7 +1,7 @@
 # GPT4js 🔮
 
-[🇺🇸](https://github.com/zachey01/gpt4free.js/blob/main/README.md)
-[🇷🇺](https://github.com/zachey01/gpt4free.js/blob/main/README-RU.md)
+[![EN](https://flagpedia.net/data/flags/emoji/apple/20x20/us.png)](https://github.com/zachey01/gpt4free.js/blob/main/README.md) &nbsp; &nbsp;
+[![EN](https://flagpedia.net/data/flags/emoji/apple/20x20/ru.png)](https://github.com/zachey01/gpt4free.js/blob/main/README.md)
 
 GPT4js is a package that simplifies interaction with various AI models, eliminating the need for an API Key or any other authorization method to access these chat completions and image generation models.
 
