@@ -1,7 +1,14 @@
-LICENSE
+LICENSE.txt
 /tests/
 webpack.config.js
 /.github/
 /node_modules/
 jest.config.js
 package-lock.json
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+LEGAL_NOTICE.md
+README-RU.md
+SECURITY.md
+.babelrc
+.gitattributes
