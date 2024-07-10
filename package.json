@@ -4,24 +4,9 @@
   "description": "Using ChatGPT4/3.5-turbo/Gemini-Pro/BlackBox and etc. unlimited and free.",
   "main": "index.cjs",
   "module": "index.js",
-  "jest": {
-    "transform": {
-      "^.+\\.js$": "babel-jest"
-    }
-  },
-  "exports": {
-    ".": {
-      "import": "./index.js",
-      "require": "./index.cjs"
-    }
-  },
   "type": "module",
-  "devDependencies": {
-    "@babel/preset-env": "^7.24.7",
-    "babel-jest": "^29.7.0",
-    "jest": "^29.7.0",
-    "prettier": "3.3.2",
-    "webpack-cli": "^5.1.4"
+  "bin": {
+    "gpt4js": "./src/bin/main.js"
   },
   "scripts": {
     "build": "npx webpack --mode=production",
@@ -32,6 +17,15 @@
     "prettier:format": "prettier --write \"**/*.{ts,tsx,js,md,mdx,css,yaml}\"",
     "prettier:check": "prettier --check \"**/*.{ts,tsx,js,md,mdx,css,yaml}\""
   },
+  "devDependencies": {
+    "@babel/preset-env": "^7.24.7",
+    "babel-jest": "^29.7.0",
+    "bun": "^0.5.1",
+    "jest": "^29.7.0",
+    "prettier": "3.3.2",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^5.1.4"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zachey01/gpt4free.js.git"
@@ -41,19 +35,27 @@
   "bugs": {
     "url": "https://github.com/zachey01/gpt4free.js/issues"
   },
-  "bin": {
-    "gpt4js": "./src/bin/main.js"
-  },
   "homepage": "https://github.com/zachey01/gpt4free.js#readme",
   "keywords": [
     "nodejs",
-    "gemini",
     "bun",
     "gpt-3",
     "gpt-4",
     "chatgpt",
     "gpt4free",
     "ollama",
-    "ollama-api"
-  ]
+    "ollama-api",
+    "gemini",
+    "blackbox",
+    "javascript",
+    "ai",
+    "chatbot",
+    "nlp",
+    "machine-learning"
+  ],
+  "jest": {
+    "transform": {
+      "^.+.js$": "babel-jest"
+    }
+  }
 }
