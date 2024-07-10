@@ -1,7 +1,7 @@
 "use strict";
 class Provider {
-  async imageGeneration(prompt, options) {
-    throw new Error("Method 'imageGeneration()' must be implemented.");
+  async chatCompletion(messages, options) {
+    throw new Error("Method 'chatCompletion()' must be implemented.");
   }
 }
 
