@@ -6,9 +6,9 @@ This package can be used in Node.js or Browser environments.
 
 ![Static Badge](https://img.shields.io/badge/Zachey-GPT4js-GPT4js)
 ![GitHub top language](https://img.shields.io/github/languages/top/zachey01/gpt4free.js)
-![GitHub](https://img.shields.io/github/license/zachey01/gpt4free.js)
 ![GitHub Repo stars](https://img.shields.io/github/stars/zachey01/gpt4free.js)
 ![GitHub issues](https://img.shields.io/github/issues/zachey01/gpt4free.js)
+![NPM Downloads](https://img.shields.io/npm/dm/gpt4js)
 
 ## 📚 Table of Contents
 
@@ -326,7 +326,7 @@ Running: `npm test`
 
 If you'd like to contribute to this project, you can do so directly on [GitHub](https://github.com/zachey01/gpt4free.js/g4f-ts). Additionally, if you encounter any errors that hinder your use of any project functionality, please [report them here](https://github.com/zachey01/gpt4free.js/issues). Your feedback helps our community access AI tools freely!
 
-----
+---
 
 <center>
   <div align="center">
