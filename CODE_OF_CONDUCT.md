@@ -6,7 +6,7 @@ We as members, contributors, and leaders pledge to make participation in our com
 
 ## Our Standards
 
-Examples of behavior that contributes to creating a positive environment include:
+### Examples of behavior that contributes to creating a positive environment include:
 
 - Using welcoming and inclusive language
 - Being respectful of differing viewpoints and experiences
@@ -14,7 +14,7 @@ Examples of behavior that contributes to creating a positive environment include
 - Focusing on the work rather than on people
 - Showing empathy towards other community members
 
-## Examples of unacceptable behavior include:
+### Examples of unacceptable behavior include:
 
 - The use of sexualized language or imagery
 - Personal attacks
