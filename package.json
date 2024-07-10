@@ -1,6 +1,6 @@
 {
   "name": "gpt4js",
-  "version": "1.5.21",
+  "version": "1.5.22",
   "description": "Using ChatGPT4/3.5-turbo/Gemini-Pro/BlackBox and etc. unlimited and free.",
   "main": "index.cjs",
   "module": "index.js",
