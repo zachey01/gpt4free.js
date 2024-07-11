@@ -186,6 +186,7 @@ const options = {
 | [Nextway](https://chat.eqing.tech)      | `Nextway`  | ✔️      | ✔️    | ✔️     | ![Active](https://img.shields.io/badge/Active-brightgreen) |
 | [Chrome](https://www.google.ru/chrome/) | `Chrome`   | ❌      | ❌    | ❌     | ![Active](https://img.shields.io/badge/Active-brightgreen) |
 | [Ollama](https://ollama.com/)           | `Ollama`   | ❌      | ❌    | ✔️     | ![Active](https://img.shields.io/badge/Active-brightgreen) |
+| [Alibaba](https://chat.chatgpt.org.uk/) | `Alibaba`  | ✔️      | ❌    | ✔️     | ![Active](https://img.shields.io/badge/Active-brightgreen) |
 
 <a id="chat-completion-models"></a>
 
