@@ -16,7 +16,13 @@ class NextwayProvider extends Provider {
           stream: options.stream,
           model: options.model || "gpt-4o-free",
           temperature: options.temperature,
-          captchaToken: "p1",
+          captchaToken:
+            "P1_" +
+            btoa(JSON.stringify({ typ: "JWT", alg: "HS256" })) +
+            "." +
+            btoa("hashedkey") +
+            "." +
+            btoa("signature"),
         }),
         method: "POST",
       }
