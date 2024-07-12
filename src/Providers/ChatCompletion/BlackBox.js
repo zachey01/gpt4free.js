@@ -1,5 +1,6 @@
 "use strict";
 import Provider from "./provider.js";
+import baseHeaders from "../../Utils/baseHeaders.js";
 
 class BlackBoxProvider extends Provider {
   async chatCompletion(messages, options = {}) {
@@ -49,13 +50,7 @@ class BlackBoxProvider extends Provider {
     }
 
     const response = await fetch(url, {
-      headers: {
-        accept: "*/*",
-        "content-type": "application/json",
-        "sec-fetch-dest": "empty",
-        "sec-fetch-mode": "cors",
-        "sec-fetch-site": "cross-site",
-      },
+      headers: baseHeaders("https://www.blackbox.ai/api/chat"),
       body: JSON.stringify(body),
       method: "POST",
       mode: "cors",

@@ -1,5 +1,6 @@
 "use strict";
 import Provider from "./provider.js";
+import baseHeaders from "../../Utils/baseHeaders.js";
 
 class NextwayProvider extends Provider {
   async chatCompletion(messages, options) {
@@ -8,11 +9,9 @@ class NextwayProvider extends Provider {
       : "https://chat.eqing.tech/api/openai/v1/chat/completions";
 
     const response = await fetch(proxyUrl, {
-      headers: {
-        accept: "text/event-stream",
-        "content-type": "application/json",
-        usesearch: "false",
-      },
+      headers: baseHeaders(
+        "https://chat.eqing.tech/api/openai/v1/chat/completions"
+      ),
       body: JSON.stringify({
         messages: messages,
         stream: options.stream,

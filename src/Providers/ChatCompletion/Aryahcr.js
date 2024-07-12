@@ -1,15 +1,13 @@
 "use strict";
 import Provider from "./provider.js";
+import baseHeaders from "../../Utils/baseHeaders.js";
 
 class AryahcrProvider extends Provider {
   async chatCompletion(messages, options) {
     try {
       const response = await fetch("https://nexra.aryahcr.cc/api/chat/gpt", {
         method: "POST",
-        headers: {
-          accept: "application/json",
-          "content-type": "application/json",
-        },
+        headers: baseHeaders("https://nexra.aryahcr.cc/api/chat/gpt"),
         body: JSON.stringify({
           messages: messages,
           model: options.model || "gpt-4",
