@@ -3,12 +3,7 @@
 import process from "process";
 import http from "http";
 import fs from "fs";
-import { dirname } from "path";
-import path from "path";
-import { fileURLToPath } from "url";
 import GPT4js from "../../index.js";
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const args = process.argv.slice(2);
 
