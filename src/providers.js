@@ -5,6 +5,7 @@ import NextwayProvider from "./Providers/ChatCompletion/Nextway.js";
 import ChromeProvider from "./Providers/ChatCompletion/Chrome.js";
 import OllamaProvider from "./Providers/ChatCompletion/Ollama.js";
 import AlibabaProvider from "./Providers/ChatCompletion/AlibabaProvider.js";
+import ChatBotRuProvider from "./Providers/ChatCompletion/ChatBotRu.js";
 
 import DALLE2Provider from "./Providers/ImageGeneration/DALLE.js";
 import StableDiffusionProvider from "./Providers/ImageGeneration/StableDiffusion.js";
@@ -24,6 +25,8 @@ class GPT4js {
         return new OllamaProvider();
       case "Alibaba":
         return new AlibabaProvider();
+      case "ChatBotRu":
+        return new ChatBotRuProvider();
       case "DALLE2":
         return new DALLE2Provider();
       case "StableDiffusion":
