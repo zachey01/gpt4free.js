@@ -1,3 +1,4 @@
+"use strict";
 import GPT4js from "./src/providers.js";
 
 if (typeof window !== "undefined") {
