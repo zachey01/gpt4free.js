@@ -3,8 +3,12 @@
 import process from "process";
 import http from "http";
 import fs from "fs";
+import { dirname } from "path";
 import path from "path";
+import { fileURLToPath } from "url";
 import GPT4js from "../../index.js";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const args = process.argv.slice(2);
 
@@ -48,7 +52,7 @@ if (parsedArgs["gui"]) {
 
   const server = http.createServer((req, res) => {
     if (req.url === "/") {
-      const indexPath = path.join(__dirname, "../src/GUI/index.html");
+      const indexPath = "./src/GUI/index.html";
       const indexHtml = fs.readFileSync(indexPath, "utf-8");
       res.writeHead(200, { "Content-Type": "text/html" });
       res.end(indexHtml);
