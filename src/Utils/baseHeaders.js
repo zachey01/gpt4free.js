@@ -13,7 +13,7 @@ function baseHeaders(url) {
     "sec-fetch-site": "same-origin",
     Referer: url,
     "Referrer-Policy": "strict-origin-when-cross-origin",
-    usesearch: "false",
+    usesearch: "true",
   };
 }
 export default baseHeaders;
