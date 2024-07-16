@@ -1,6 +1,7 @@
 "use strict";
 import Provider from "./provider.js";
 import baseHeaders from "../../Utils/baseHeaders.js";
+import startStreaming from "../../Utils/stream.js";
 
 class AlibabaProvider extends Provider {
   async chatCompletion(messages, options) {
@@ -23,8 +24,15 @@ class AlibabaProvider extends Provider {
           method: "POST",
         }
       );
-      const text = await response.json();
-      return text.choices[0].message.content;
+
+      if (options.stream === true) {
+        startStreaming(response).then((chunk) => {
+          return chunk;
+        });
+      } else {
+        const text = await response.json();
+        return text.choices[0].message.content;
+      }
     } catch (error) {
       console.error("Error:", error);
       throw error;

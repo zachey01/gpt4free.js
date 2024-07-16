@@ -1,6 +1,7 @@
 "use strict";
 import Provider from "./provider.js";
 import baseHeaders from "../../Utils/baseHeaders.js";
+import startStreaming from "../../Utils/stream.js";
 
 class ChatBotRuProvider extends Provider {
   async chatCompletion(messages, options) {
@@ -32,8 +33,14 @@ class ChatBotRuProvider extends Provider {
         }
       );
 
-      const text = await response.json();
-      return text.choices[0].message.content;
+      if (options.stream === true) {
+        startStreaming(response).then((chunk) => {
+          return chunk;
+        });
+      } else {
+        const text = await response.json();
+        return text.choices[0].delta.content;
+      }
     } catch (error) {
       console.error("Error:", error);
       throw error;
