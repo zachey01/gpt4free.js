@@ -9,9 +9,10 @@ class NextwayProvider extends Provider {
       : "https://chat.eqing.tech/api/openai/v1/chat/completions";
 
     const response = await fetch(proxyUrl, {
-      headers: baseHeaders(
-        "https://chat.eqing.tech/api/openai/v1/chat/completions"
-      ),
+      headers: {
+        ...baseHeaders("https://chat.eqing.tech"),
+        usesearch: options.webSearch,
+      },
       body: JSON.stringify({
         messages: messages,
         stream: options.stream,

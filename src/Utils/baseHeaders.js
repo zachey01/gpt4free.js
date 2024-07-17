@@ -8,12 +8,13 @@ function baseHeaders(url) {
       '"Chromium";v="124", "YaBrowser";v="24.6", "Not-A.Brand";v="99", "Yowser";v="2.5"',
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": '"Windows"',
+    plugins: "0",
     "sec-fetch-dest": "empty",
     "sec-fetch-mode": "cors",
     "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest",
     Referer: url,
     "Referrer-Policy": "strict-origin-when-cross-origin",
-    usesearch: "true",
   };
 }
 export default baseHeaders;
