@@ -187,7 +187,7 @@ const options = {
 | [Aryahcr](https://nexra.aryahcr.cc)                                          | `Aryahcr`   | ✔️      | ✔️    | ✔️     | ![Active](https://img.shields.io/badge/Active-brightgreen) |
 | [BlackBox](https://www.blackbox.ai)                                          | `BlackBox`  | ❌      | ❌    | ❌     | ![Active](https://img.shields.io/badge/Active-brightgreen) |
 | [Nextway](https://chat.eqing.tech)                                           | `Nextway`   | ✔️      | ✔️    | ✔️     | ![Active](https://img.shields.io/badge/Active-brightgreen) |
-| [Chrome](https://www.google.ru/chrome/)                                      | `Chrome`    | ❌      | ❌    | ❌     | ![Active](https://img.shields.io/badge/Active-brightgreen) |
+| [Chrome](https://www.google.ru/chrome/)                                      | `Chrome`    | ❌      | ❌    | ✔️     | ![Active](https://img.shields.io/badge/Active-brightgreen) |
 | [Ollama](https://ollama.com/)                                                | `Ollama`    | ❌      | ❌    | ✔️     | ![Active](https://img.shields.io/badge/Active-brightgreen) |
 | [Alibaba](https://chat.chatgpt.org.uk/)                                      | `Alibaba`   | ✔️      | ❌    | ✔️     | ![Active](https://img.shields.io/badge/Active-brightgreen) |
 | [ChatBotRu](https://gpt-chatbot.ru/chat-gpt-ot-openai-dlya-generacii-teksta) | `ChatBotRu` | ❌      | ✔️    | ✔️     | ![Active](https://img.shields.io/badge/Active-brightgreen) |
