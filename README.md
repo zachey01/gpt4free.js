@@ -113,7 +113,9 @@ const options = {
 (async () => {
   const provider = GPT4js.createProvider(options.provider);
   try {
-    const text = await provider.chatCompletion(messages, options);
+    const text = await provider.chatCompletion(messages, options, (data) => {
+      console.log(data);
+    });
     console.log(text);
   } catch (error) {
     console.error("Error:", error);
@@ -142,7 +144,9 @@ const options = {
 (async () => {
   const provider = GPT4js.createProvider(options.provider);
   try {
-    const text = await provider.chatCompletion(messages, options);
+    const text = await provider.chatCompletion(messages, options, (data) => {
+      console.log(data);
+    });
     console.log(text);
   } catch (error) {
     console.error("Error:", error);
@@ -292,7 +296,9 @@ const options = {
 (async () => {
   const provider = GPT4js.createProvider(options.provider);
   try {
-    const text = await provider.chatCompletion(messages, options);
+    const text = await provider.chatCompletion(messages, options, (data) => {
+      console.log(data);
+    });
     console.log(text);
   } catch (error) {
     console.error("Error:", error);
