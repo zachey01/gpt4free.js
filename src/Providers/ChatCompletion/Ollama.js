@@ -1,9 +1,10 @@
 "use strict";
 import Provider from "./provider.js";
 import baseHeaders from "../../Utils/baseHeaders.js";
+import startStreaming from "../../Utils/stream.js";
 
 class OllamaProvider extends Provider {
-  async chatCompletion(messages, options) {
+  async chatCompletion(messages, options, onData) {
     try {
       const response = await fetch(
         `${options.ollama_url || "http://localhost:11434"}/api/chat`,
@@ -24,8 +25,12 @@ class OllamaProvider extends Provider {
         throw new Error("Network response was not ok");
       }
 
-      const responseData = await response.json();
-      return responseData.message.content;
+      if (options.stream) {
+        await startStreaming(response, onData);
+      } else {
+        const responseData = await response.json();
+        return responseData.message.content;
+      }
     } catch (error) {
       console.error("Error fetching data:", error.message);
     }

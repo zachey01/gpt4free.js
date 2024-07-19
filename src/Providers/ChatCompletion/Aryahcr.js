@@ -1,9 +1,10 @@
 "use strict";
 import Provider from "./provider.js";
 import baseHeaders from "../../Utils/baseHeaders.js";
+import startStreaming from "../../Utils/stream.js";
 
 class AryahcrProvider extends Provider {
-  async chatCompletion(messages, options) {
+  async chatCompletion(messages, options, onData) {
     try {
       const response = await fetch("https://nexra.aryahcr.cc/api/chat/gpt", {
         method: "POST",
@@ -20,11 +21,15 @@ class AryahcrProvider extends Provider {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      const responseData = await response.json();
-      if (responseData.status && responseData.gpt) {
-        return responseData.gpt;
+      if (options.stream) {
+        await startStreaming(response, onData);
       } else {
-        throw new Error("Unexpected response format");
+        const responseData = await response.json();
+        if (responseData.status && responseData.gpt) {
+          return responseData.gpt;
+        } else {
+          throw new Error("Unexpected response format");
+        }
       }
     } catch (error) {
       console.error("Error:", error);

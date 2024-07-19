@@ -1,4 +1,4 @@
-async function startStreaming(response) {
+async function startStreaming(response, onData) {
   if (!response.ok) {
     throw new Error(`HTTP error! Status: ${response.status}`);
   }
@@ -29,7 +29,7 @@ async function startStreaming(response) {
         }
         try {
           let chunkObj = JSON.parse(chunk);
-          console.log(chunkObj.choices[0].delta.content);
+          onData(chunkObj.choices[0].delta.content);
         } catch (error) {
           console.error("Error parsing chunk:", error);
         }

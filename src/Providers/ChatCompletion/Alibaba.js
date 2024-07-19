@@ -4,7 +4,7 @@ import baseHeaders from "../../Utils/baseHeaders.js";
 import startStreaming from "../../Utils/stream.js";
 
 class AlibabaProvider extends Provider {
-  async chatCompletion(messages, options) {
+  async chatCompletion(messages, options, onData) {
     try {
       const response = await fetch(
         "https://chat.chatgpt.org.uk/api/openai/v1/chat/completions",
@@ -26,9 +26,7 @@ class AlibabaProvider extends Provider {
       );
 
       if (options.stream === true) {
-        startStreaming(response).then((chunk) => {
-          return chunk;
-        });
+        await startStreaming(response, onData);
       } else {
         const text = await response.json();
         return text.choices[0].message.content;

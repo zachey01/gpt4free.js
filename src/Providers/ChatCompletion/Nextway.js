@@ -1,9 +1,10 @@
 "use strict";
 import Provider from "./provider.js";
 import baseHeaders from "../../Utils/baseHeaders.js";
+import startStreaming from "../../Utils/stream.js";
 
 class NextwayProvider extends Provider {
-  async chatCompletion(messages, options) {
+  async chatCompletion(messages, options, onData) {
     const proxyUrl = options.use_proxy
       ? "https://proxy.zachey.space/?url=https://chat.eqing.tech/api/openai/v1/chat/completions"
       : "https://origin.eqing.tech/api/openai/v1/chat/completions";
@@ -11,7 +12,7 @@ class NextwayProvider extends Provider {
     const response = await fetch(proxyUrl, {
       headers: {
         ...baseHeaders("https://origin.eqing.tech/"),
-        usesearch: "true",
+        usesearch: [options.webSearch].toString(),
       },
       body: JSON.stringify({
         messages: messages,
@@ -29,18 +30,22 @@ class NextwayProvider extends Provider {
       return;
     }
 
-    try {
-      const jsonData = await response.json();
-      if (
-        jsonData.choices &&
-        jsonData.choices.length > 0 &&
-        jsonData.choices[0].message &&
-        jsonData.choices[0].message.content
-      ) {
-        return jsonData.choices[0].message.content.trim();
+    if (options.stream) {
+      await startStreaming(response, onData);
+    } else {
+      try {
+        const jsonData = await response.json();
+        if (
+          jsonData.choices &&
+          jsonData.choices.length > 0 &&
+          jsonData.choices[0].message &&
+          jsonData.choices[0].message.content
+        ) {
+          return jsonData.choices[0].message.content.trim();
+        }
+      } catch (e) {
+        console.error("Failed to parse JSON:", e);
       }
-    } catch (e) {
-      console.error("Failed to parse JSON:", e);
     }
   }
 }
