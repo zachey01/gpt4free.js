@@ -4,7 +4,7 @@ import baseHeaders from "../../Utils/baseHeaders.js";
 import startStreaming from "../../Utils/stream.js";
 
 class ChatBotRuProvider extends Provider {
-  async chatCompletion(messages, options) {
+  async chatCompletion(messages, options, onData) {
     try {
       const models = {
         "gpt-4o": "gpt-4o-2024-05-13",
@@ -33,13 +33,15 @@ class ChatBotRuProvider extends Provider {
         }
       );
 
-      if (options.stream === true) {
-        startStreaming(response).then((chunk) => {
-          return chunk;
-        });
+      if (!response.ok) {
+        throw new Error(`Network response was not ok: ${response.status}`);
+      }
+
+      if (options.stream) {
+        await startStreaming(response, onData);
       } else {
-        const text = await response.json();
-        return text.choices[0].delta.content;
+        const responseData = await response.json();
+        return responseData.choices[0].delta.content;
       }
     } catch (error) {
       console.error("Error:", error);
