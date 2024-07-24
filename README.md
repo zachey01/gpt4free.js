@@ -1,6 +1,5 @@
 # GPT4js 🔮
 
-d
 GPT4js is a package that simplifies interaction with various AI models, eliminating the need for an API Key or any other authorization method to access these chat completions and image generation models.
 
 This package can be used in Node.js or Browser environments.
@@ -13,32 +12,34 @@ This package can be used in Node.js or Browser environments.
 
 ## 📚 Table of Contents
 
-- [🛠️ Installation](#installation)
-  - [Using NPM](#using-npm)
-  - [Using Yarn](#using-yarn)
-  - [Using Bun](#using-bun)
-  - [Using CDN](#using-cdn)
-- [🧩 Examples](#examples)
-  - [📤 Chat Completion](#chat-completion)
-    - [⚙️ Basic Usage](#basic-usage)
+- [GPT4js 🔮](#gpt4js-)
+  - [📚 Table of Contents](#-table-of-contents)
+  - [🛠️ Installation](#️-installation)
+    - [Using NPM](#using-npm)
+    - [Using Yarn](#using-yarn)
+    - [Using Bun](#using-bun)
+    - [Using CDN](#using-cdn)
+- [🧩 Examples](#-examples)
+  - [📤 Chat Completion](#-chat-completion)
+    - [⚙️ Basic Usage](#️-basic-usage)
       - [Simple Fetch](#simple-fetch)
       - [Give Your Instructions](#give-your-instructions)
       - [Conversation Roles](#conversation-roles)
-    - [🔩 Configurable Options](#configurable-options)
-    - [🚀 Chat Completion Providers](#chat-completion-providers)
-    - [📚 Chat Completion Models](#chat-completion-models)
-  - [📷 Image Generation (BETA)](#image-generation)
-    - [🌐 Image Generation Provider Options](#image-generation-provider-options)
-    - [🧮 Number Type Options](#number-type-options)
-    - [🖼️ Image Generation Providers](#image-generation-providers)
-- [🧠 Google Chrome AI](#google-chrome-ai)
-  - [Setting Browser](#setting-browser)
-  - [Simple Usage](#simple-usage)
-- [🧪 Testing](#testing)
-- [🚧 Building](#building)
+    - [🔩 Configurable Options](#-configurable-options)
+    - [🚀 Chat Completion Providers](#-chat-completion-providers)
+    - [📚 Chat Completion Models](#-chat-completion-models)
+- [📷 Image Generation (BETA)](#-image-generation-beta)
+  - [🌐 Image Generation Provider Options](#-image-generation-provider-options)
+  - [🧮 Number Type Options](#-number-type-options)
+  - [🖼️ Image Generation Providers](#️-image-generation-providers)
+  - [🧠 Google Chrome AI](#-google-chrome-ai)
+    - [Setting Browser](#setting-browser)
+      - [Simple Usage](#simple-usage)
+- [🧪 Testing](#-testing)
+- [🚧 Building](#-building)
   - [Webpack](#webpack)
   - [Bun](#bun)
-- [🤝 Contribute](#contribute)
+- [🤝 Contribute](#-contribute)
 
 <a id="installation"></a>
 
