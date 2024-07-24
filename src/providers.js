@@ -1,4 +1,3 @@
-"use strict";
 import AryahcrProvider from "./Providers/ChatCompletion/Aryahcr.js";
 import BlackBoxProvider from "./Providers/ChatCompletion/BlackBox.js";
 import NextwayProvider from "./Providers/ChatCompletion/Nextway.js";
@@ -10,30 +9,25 @@ import ChatBotRuProvider from "./Providers/ChatCompletion/ChatBotRu.js";
 import DALLE2Provider from "./Providers/ImageGeneration/DALLE.js";
 import StableDiffusionProvider from "./Providers/ImageGeneration/StableDiffusion.js";
 
+const PROVIDERS = {
+  Aryahcr: AryahcrProvider,
+  BlackBox: BlackBoxProvider,
+  Nextway: NextwayProvider,
+  Chrome: ChromeProvider,
+  Ollama: OllamaProvider,
+  Alibaba: AlibabaProvider,
+  ChatBotRu: ChatBotRuProvider,
+  DALLE2: DALLE2Provider,
+  StableDiffusion: StableDiffusionProvider
+};
+
 class GPT4js {
   static createProvider(providerName) {
-    switch (providerName) {
-      case "Aryahcr":
-        return new AryahcrProvider();
-      case "BlackBox":
-        return new BlackBoxProvider();
-      case "Nextway":
-        return new NextwayProvider();
-      case "Chrome":
-        return new ChromeProvider();
-      case "Ollama":
-        return new OllamaProvider();
-      case "Alibaba":
-        return new AlibabaProvider();
-      case "ChatBotRu":
-        return new ChatBotRuProvider();
-      case "DALLE2":
-        return new DALLE2Provider();
-      case "StableDiffusion":
-        return new StableDiffusionProvider();
-      default:
-        throw new Error(`Provider ${providerName} is not supported.`);
+    const Provider = PROVIDERS[providerName];
+    if (!Provider) {
+      throw new Error(`Provider ${providerName} is not supported.`);
     }
+    return new Provider();
   }
 }
 
