@@ -191,7 +191,7 @@ const options = {
 | [Chrome](https://www.google.ru/chrome/)                                      | `Chrome`    | ❌      | ❌    | ✔️     | ![Active](https://img.shields.io/badge/Active-brightgreen) |
 | [Ollama](https://ollama.com/)                                                | `Ollama`    | ❌      | ❌    | ✔️     | ![Active](https://img.shields.io/badge/Active-brightgreen) |
 | [Alibaba](https://chat.chatgpt.org.uk/)                                      | `Alibaba`   | ✔️      | ❌    | ✔️     | ![Active](https://img.shields.io/badge/Active-brightgreen) |
-| [ChatBotRu](https://gpt-chatbot.ru/chat-gpt-ot-openai-dlya-generacii-teksta) | `ChatBotRu` | ❌      | ✔️    | ✔️     | ![Active](https://img.shields.io/badge/Active-brightgreen) |
+| [ChatBotRu](https://gpt-chatbot.ru/chat-gpt-ot-openai-dlya-generacii-teksta) | `ChatBotRu` | ❌      | ✔️    | ✔️     | ![Inactive](https://img.shields.io/badge/Inactive-red)     |
 
 <a id="chat-completion-models"></a>
 

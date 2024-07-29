@@ -1,3 +1,4 @@
+// not working
 "use strict";
 import Provider from "./provider.js";
 import baseHeaders from "../../Utils/baseHeaders.js";
@@ -37,11 +38,11 @@ class ChatBotRuProvider extends Provider {
         throw new Error(`Network response was not ok: ${response.status}`);
       }
 
-      if (options.stream) {
+      if (options.stream === true) {
         await startStreaming(response, onData);
       } else {
-        const responseData = await response.json();
-        return responseData.choices[0].delta.content;
+        const responseData = await response.text();
+        console.log(responseData);
       }
     } catch (error) {
       console.error("Error:", error);
