@@ -197,44 +197,45 @@ const options = {
 
 ### 📚 Chat Completion Models
 
-| Model                  | Providers that support it         |
-| ---------------------- | --------------------------------- |
-| gpt-4                  | `Aryahcr`, `Nextway`, `ChatBotRu` |
-| gpt-4-0613             | `Aryahcr`                         |
-| gpt-4-32k              | `Aryahcr`                         |
-| gpt-4-0314             | `Aryahcr`                         |
-| gpt-4o-free            | `Nextway`                         |
-| gpt-4o                 | `ChatBotRu`                       |
-| gpt-4-32k-0314         | `Aryahcr`                         |
-| gpt-4-turbo            | `ChatBotRu`                       |
-| gpt-3.5-turbo          | `Aryahcr`, `Nextway`, `Alibaba`   |
-| gpt-3.5-turbo-16k      | `Aryahcr`                         |
-| gpt-3.5-turbo-0613     | `Aryahcr`                         |
-| gpt-3.5-turbo-16k-0613 | `Aryahcr`                         |
-| gpt-3.5-turbo-0301     | `Aryahcr`                         |
-| text-davinci-003       | `Aryahcr`                         |
-| text-davinci-002       | `Aryahcr`                         |
-| code-davinci-002       | `Aryahcr`                         |
-| gpt-3                  | `Aryahcr`                         |
-| text-curie-001         | `Aryahcr`                         |
-| text-babbage-001       | `Aryahcr`                         |
-| text-ada-001           | `Aryahcr`                         |
-| davinci                | `Aryahcr`                         |
-| curie                  | `Aryahcr`                         |
-| babbage                | `Aryahcr`                         |
-| ada                    | `Aryahcr`                         |
-| babbage-002            | `Aryahcr`                         |
-| davinci-002            | `Aryahcr`                         |
-| gemini-pro             | `Nextway`                         |
-| gemini-nano            | `Chrome`                          |
-| All Ollama models      | `Ollama`                          |
-| SparkDesk-v1.1         | `Alibaba`                         |
-| deepseek-coder         | `Alibaba`                         |
-| deepseek-chat          | `Alibaba`                         |
-| Qwen2-7B-Instruct      | `Alibaba`                         |
-| glm4-9B-chat           | `Alibaba`                         |
-| chatglm3-6B            | `Alibaba`                         |
-| Yi-1.5-9B-Chat         | `Alibaba`                         |
+| Model                        | Providers that support it         |
+| ---------------------------- | --------------------------------- |
+| gpt-4                        | `Aryahcr`, `Nextway`, `ChatBotRu` |
+| gpt-4-0613                   | `Aryahcr`                         |
+| gpt-4-32k                    | `Aryahcr`                         |
+| gpt-4-0314                   | `Aryahcr`                         |
+| gpt-4o-free                  | `Nextway`                         |
+| gpt-4o                       | `ChatBotRu`                       |
+| gpt-4-32k-0314               | `Aryahcr`                         |
+| gpt-4-turbo                  | `ChatBotRu`                       |
+| gpt-3.5-turbo                | `Aryahcr`, `Nextway`, `Alibaba`   |
+| gpt-3.5-turbo-16k            | `Aryahcr`                         |
+| gpt-3.5-turbo-0613           | `Aryahcr`                         |
+| gpt-3.5-turbo-16k-0613       | `Aryahcr`                         |
+| gpt-3.5-turbo-0301           | `Aryahcr`                         |
+| text-davinci-003             | `Aryahcr`                         |
+| text-davinci-002             | `Aryahcr`                         |
+| code-davinci-002             | `Aryahcr`                         |
+| gpt-3                        | `Aryahcr`                         |
+| text-curie-001               | `Aryahcr`                         |
+| text-babbage-001             | `Aryahcr`                         |
+| text-ada-001                 | `Aryahcr`                         |
+| davinci                      | `Aryahcr`                         |
+| curie                        | `Aryahcr`                         |
+| babbage                      | `Aryahcr`                         |
+| ada                          | `Aryahcr`                         |
+| babbage-002                  | `Aryahcr`                         |
+| davinci-002                  | `Aryahcr`                         |
+| gemini-pro                   | `Nextway`                         |
+| gemini-nano                  | `Chrome`                          |
+| All Ollama models            | `Ollama`                          |
+| SparkDesk-v1.1               | `Alibaba`                         |
+| deepseek-coder               | `Alibaba`                         |
+| deepseek-chat                | `Alibaba`                         |
+| Qwen2-7B-Instruct            | `Alibaba`                         |
+| glm4-9B-chat                 | `Alibaba`                         |
+| chatglm3-6B                  | `Alibaba`                         |
+| Yi-1.5-9B-Chat               | `Alibaba`                         |
+| llama-3.1-405b-instruct-free | `Nextway`                         |
 
 <a id="image-generation"></a>
 
