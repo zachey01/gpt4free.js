@@ -28,7 +28,8 @@ This package can be used in Node.js or Browser environments.
     - [🔩 Configurable Options](#-configurable-options)
     - [🚀 Chat Completion Providers](#-chat-completion-providers)
     - [📚 Chat Completion Models](#-chat-completion-models)
-- [📷 Image Generation (BETA)](#-image-generation-beta)
+- [📷 Image Generation](#-image-generation)
+  - [📹 Example usage](#-example-usage)
   - [🌐 Image Generation Provider Options](#-image-generation-provider-options)
   - [🧮 Number Type Options](#-number-type-options)
   - [🖼️ Image Generation Providers](#️-image-generation-providers)
@@ -239,7 +240,27 @@ const options = {
 
 <a id="image-generation"></a>
 
-# 📷 Image Generation (BETA)
+# 📷 Image Generation
+
+<a id="image-gen-usage"></a>
+
+## 📹 Example usage
+
+```js
+const options = {
+  provider: "DALLE2",
+};
+
+(async () => {
+  const provider = GPT4js.createProvider(options.provider);
+  try {
+    const base64 = await provider.imageGeneration("wood", options);
+    console.log(base64);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+})();
+```
 
 With the `imageGeneration` function, you can generate images from textual input along with optional parameters to customize and stylize the images in various artistic styles.
 
