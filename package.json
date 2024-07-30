@@ -29,8 +29,8 @@
     "build:bun": "bun build index.js --minify --outdir ./dist --target browser",
     "dev:bun": "bun build index.js --minify --outdir ./dist --target browser --watch",
     "test": "npx jest --config jest.config.js",
-    "prettier:format": "prettier --write \"**/*.{ts,tsx,js,md,mdx,css,yaml}\"",
-    "prettier:check": "prettier --check \"**/*.{ts,tsx,js,md,mdx,css,yaml}\""
+    "prettier:format": "npx prettier --write \"**/*.{ts,tsx,js,md,mdx,css,yaml}\"",
+    "prettier:check": "npx prettier --check \"**/*.{ts,tsx,js,md,mdx,css,yaml}\""
   },
   "repository": {
     "type": "git",
@@ -40,9 +40,6 @@
   "license": "GNU",
   "bugs": {
     "url": "https://github.com/zachey01/gpt4free.js/issues"
-  },
-  "bin": {
-    "gpt4js": "./src/bin/main.js"
   },
   "homepage": "https://github.com/zachey01/gpt4free.js#readme",
   "keywords": [
