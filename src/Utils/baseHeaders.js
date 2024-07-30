@@ -1,3 +1,4 @@
+"use strict";
 function baseHeaders(url) {
   return {
     accept: "application/json, text/event-stream",

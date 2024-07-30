@@ -1,3 +1,4 @@
+"use strict";
 import AryahcrProvider from "./Providers/ChatCompletion/Aryahcr.js";
 import BlackBoxProvider from "./Providers/ChatCompletion/BlackBox.js";
 import NextwayProvider from "./Providers/ChatCompletion/Nextway.js";
