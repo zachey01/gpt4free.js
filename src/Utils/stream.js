@@ -24,9 +24,9 @@ async function startStreaming(response, onData) {
       chunk = chunk.replace(/^data: /, "");
       if (chunk.trim() !== "" && !seenChunks.has(chunk)) {
         seenChunks.add(chunk);
-        if (chunk.trim() === "[DONE]") {
-          return; // Skip processing [DONE] responses
-        }
+        if (chunk.trim() === "[DONE]" || chunk.trim().match(/>\s*p\s*r\s*o\s*v\s*i\s*d\s*e\s*d/i)) {
+          return; // Skip processing [DONE] or "> provided" (For Nextway) responses
+        }        
         try {
           let chunkObj = JSON.parse(chunk);
           onData(chunkObj.choices[0].delta.content);
