@@ -6,10 +6,9 @@ import startStreaming from "../../Utils/stream.js";
 class AryahcrProvider extends Provider {
   async chatCompletion(messages, options, onData) {
     try {
-      
-      const response = await fetch("https://nexra.aryahcr.cc/api/chat/complements", {
+      const response = await fetch("https://nexra.aryahcr.cc/api/chat/gpt", {
         method: "POST",
-        headers: baseHeaders("https://nexra.aryahcr.cc/api/chat/complements"),
+        headers: baseHeaders("https://nexra.aryahcr.cc/api/chat/gpt"),
         body: JSON.stringify({
           messages: messages,
           model: options.model || "gpt-4",
@@ -25,8 +24,7 @@ class AryahcrProvider extends Provider {
         await startStreaming(response, onData);
       } else {
         const responseData = await response.text();
-          return responseData;
-        
+        return responseData;
       }
     } catch (error) {
       console.error("Error:", error);
