@@ -40,6 +40,12 @@ function processChunks(buffer, seenChunks, onData) {
 
   for (let chunk of chunks) {
     chunk = chunk.replace(/^data: /, "").trim();
+
+    // Ignore the [DONE] token
+    if (chunk === "[DONE]") {
+      continue;
+    }
+
     if (chunk !== "" && chunk !== undefined) {
       seenChunks.add(chunk);
       chunkAccumulator += chunk;
@@ -55,29 +61,25 @@ function processChunks(buffer, seenChunks, onData) {
 
       try {
         let chunkObj = JSON.parse(chunk);
-        //console.log("Parsed chunk object:", chunkObj);
-      
+
         if (chunkObj.choices) {
           let content = chunkObj.choices[0]?.delta?.content || chunkObj.gpt;
-          //console.log("Content from choices:", content);
-      
+
           content = content.replace(/\s+/g, " ").trim();
-          if (content !== "" && content !== undefined) {
+          if (content !== undefined) {
             onData(content);
           }
         } else if (chunkObj.gpt) {
           let content = chunkObj.gpt;
-          //console.log("Content from gpt:", content);
-      
+
           content = content.replace(/\s+/g, " ").trim();
-          if (content !== "" && content !== undefined) {
+          if (content !== undefined) {
             onData(content);
           }
         }
       } catch (error) {
         console.error("Error parsing chunk:", error);
       }
-      
     }
   }
 
