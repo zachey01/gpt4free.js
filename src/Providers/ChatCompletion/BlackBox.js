@@ -42,14 +42,7 @@ class BlackBoxProvider extends Provider {
       visitFromDelta: options.visitFromDelta || null,
     };
 
-    let url;
-    if (typeof window !== "undefined") {
-      url = "https://proxy.zachey.space/?url=http://www.blackbox.ai/api/chat";
-    } else {
-      url = "https://www.blackbox.ai/api/chat";
-    }
-
-    const response = await fetch(url, {
+    const response = await fetch("https://www.blackbox.ai/api/chat", {
       headers: baseHeaders("https://www.blackbox.ai/api/chat"),
       body: JSON.stringify(body),
       method: "POST",
