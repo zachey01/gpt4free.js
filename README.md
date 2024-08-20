@@ -18,7 +18,6 @@ This package can be used in Node.js or Browser environments.
     - [Using NPM](#using-npm)
     - [Using Yarn](#using-yarn)
     - [Using Bun](#using-bun)
-    - [Using CDN](#using-cdn)
 - [🧩 Examples](#-examples)
   - [📤 Chat Completion](#-chat-completion)
     - [⚙️ Basic Usage](#️-basic-usage)
@@ -70,14 +69,6 @@ yarn add gpt4js
 bun add gpt4js
 ```
 
-<a id="using-cdn"></a>
-
-### Using CDN
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/gpt4js/dist/gpt4js.min.js"></script>
-```
-
 <a id="examples"></a>
 
 # 🧩 Examples
@@ -104,7 +95,6 @@ const getGPT4js = require("gpt4js");
 const GPT4js = await getGPT4js();
 // ESM
 import GPT4js from "gpt4js";
-// In browsers use <script> tag
 
 const messages = [{ role: "user", content: "hi!" }];
 const options = {
