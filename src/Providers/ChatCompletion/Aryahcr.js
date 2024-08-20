@@ -12,7 +12,6 @@ class AryahcrProvider extends Provider {
         body: JSON.stringify({
           messages: messages,
           model: options.model || "gpt-4",
-          temperature: options.temperature || 0.5,
           stream: options.stream || false,
         }),
       });
@@ -21,15 +20,12 @@ class AryahcrProvider extends Provider {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      if (options.stream) {
+      if (options.stream === true) {
         await startStreaming(response, onData);
       } else {
-        const responseData = await response.json();
-        if (responseData.status && responseData.gpt) {
-          return responseData.gpt;
-        } else {
-          throw new Error("Unexpected response format");
-        }
+        const responseData = await response.text();
+          return responseData;
+        
       }
     } catch (error) {
       console.error("Error:", error);
