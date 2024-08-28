@@ -4,11 +4,6 @@
   "description": "Using ChatGPT4/3.5-turbo/Gemini-Pro/BlackBox and etc. unlimited and free.",
   "main": "index.cjs",
   "module": "index.js",
-  "jest": {
-    "transform": {
-      "^.+\\.js$": "babel-jest"
-    }
-  },
   "exports": {
     ".": {
       "import": "./index.js",
