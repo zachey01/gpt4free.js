@@ -63,17 +63,17 @@ function processChunks(buffer, seenChunks, onData) {
         let chunkObj = JSON.parse(chunk);
 
         if (chunkObj.choices) {
-          let content = chunkObj.choices[0]?.delta?.content || chunkObj.gpt;
+          let content = chunkObj.choices[0]?.delta?.content || "";
 
           content = content.replace(/\s+/g, " ").trim();
-          if (content !== undefined) {
+          if (content !== "") {
             onData(content);
           }
         } else if (chunkObj.gpt) {
-          let content = chunkObj.gpt;
+          let content = chunkObj.gpt || "";
 
           content = content.replace(/\s+/g, " ").trim();
-          if (content !== undefined) {
+          if (content !== "") {
             onData(content);
           }
         }
