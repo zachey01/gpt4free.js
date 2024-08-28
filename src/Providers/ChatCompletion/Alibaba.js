@@ -25,11 +25,18 @@ class AlibabaProvider extends Provider {
         }
       );
 
+      if (!response.ok) {
+        // Handle errors with the response
+        const errorText = await response.text();
+        throw new Error(`HTTP error! status: ${response.status}, ${errorText}`);
+      }
+
       if (options.stream === true) {
         await startStreaming(response, onData);
       } else {
-        const text = await response.json();
-        return text.choices[0].message.content;
+        let data = await response.json();
+        data = data.choices[0].message.content || data.choices.message.content;
+        return data;
       }
     } catch (error) {
       console.error("Error:", error);
