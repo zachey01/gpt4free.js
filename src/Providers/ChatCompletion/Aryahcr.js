@@ -23,8 +23,9 @@ class AryahcrProvider extends Provider {
       if (options.stream === true) {
         await startStreaming(response, onData);
       } else {
-        const responseData = await response.text();
-        return responseData;
+        let data = await response.json();
+        data = data.gpt;
+        return data;
       }
     } catch (error) {
       console.error("Error:", error);
