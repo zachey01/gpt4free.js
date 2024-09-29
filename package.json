@@ -15,8 +15,8 @@
     "prettier": "3.3.3"
   },
   "scripts": {
-    "prettier:format": "npx prettier --write \"**/*.{ts,tsx,js,md,mdx,css,yaml}\"",
-    "prettier:check": "npx prettier --check \"**/*.{ts,tsx,js,md,mdx,css,yaml}\""
+    "prettier:format": "npx prettier --write .",
+    "prettier:check": "npx prettier --check ."
   },
   "repository": {
     "type": "git",
