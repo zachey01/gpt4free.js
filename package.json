@@ -12,7 +12,7 @@
   },
   "type": "module",
   "devDependencies": {
-    "prettier": "3.3.3"
+    "prettier": "3.4.1"
   },
   "scripts": {
     "prettier:format": "npx prettier --write .",
