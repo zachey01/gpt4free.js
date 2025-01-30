@@ -1,4 +1,5 @@
 "use strict";
+
 function baseHeaders(url) {
   return {
     accept: "application/json, text/event-stream",
@@ -18,4 +19,5 @@ function baseHeaders(url) {
     "Referrer-Policy": "strict-origin-when-cross-origin",
   };
 }
+
 export default baseHeaders;

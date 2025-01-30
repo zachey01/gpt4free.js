@@ -1,8 +1,9 @@
 "use strict";
-class Provider {
+
+class ImageGenerationProvider {
   async imageGeneration(prompt, options) {
     throw new Error("Method 'imageGeneration()' must be implemented.");
   }
 }
 
-export default Provider;
+export default ImageGenerationProvider;

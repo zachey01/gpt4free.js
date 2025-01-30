@@ -1,8 +1,9 @@
 "use strict";
-class Provider {
-  async chatCompletion(messages, options) {
+
+class ChatCompletionProvider {
+  async chatCompletion(messages, options, onData) {
     throw new Error("Method 'chatCompletion()' must be implemented.");
   }
 }
 
-export default Provider;
+export default ChatCompletionProvider;

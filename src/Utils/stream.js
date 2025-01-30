@@ -1,4 +1,5 @@
 "use strict";
+
 async function startStreaming(response, onData) {
   if (!response.ok) {
     throw new Error(`HTTP error! Status: ${response.status}`);

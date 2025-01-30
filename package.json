@@ -2,21 +2,21 @@
   "name": "gpt4js",
   "version": "1.7.8",
   "description": "Using ChatGPT4/3.5-turbo/Gemini-Pro/BlackBox and etc. unlimited and free.",
-  "main": "index.cjs",
-  "module": "index.js",
+  "main": "index.js",
+  "type": "module",
   "exports": {
     ".": {
       "import": "./index.js",
-      "require": "./index.cjs"
+      "require": "./index.js"
     }
   },
-  "type": "module",
   "devDependencies": {
     "prettier": "3.3.3"
   },
   "scripts": {
     "prettier:format": "npx prettier --write .",
-    "prettier:check": "npx prettier --check ."
+    "prettier:check": "npx prettier --check .",
+    "test": "node --test"
   },
   "repository": {
     "type": "git",
