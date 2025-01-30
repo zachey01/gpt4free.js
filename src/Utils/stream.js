@@ -1,5 +1,11 @@
 "use strict";
 
+/**
+ * Starts streaming the response data.
+ * @param {Response} response - Fetch API Response object.
+ * @param {Function} onData - Callback to handle incoming data chunks.
+ * @returns {Promise<string>} - Resolves when streaming is complete.
+ */
 async function startStreaming(response, onData) {
   if (!response.ok) {
     throw new Error(`HTTP error! Status: ${response.status}`);
@@ -33,9 +39,16 @@ async function startStreaming(response, onData) {
   return "";
 }
 
+/**
+ * Processes buffered chunks.
+ * @param {Array} buffer - Array of buffered string chunks.
+ * @param {Set} seenChunks - Set to track seen chunks.
+ * @param {Function} onData - Callback to handle data.
+ * @returns {boolean} - Whether to continue streaming.
+ */
 function processChunks(buffer, seenChunks, onData) {
-  let combinedChunks = buffer.join("");
-  let chunks = combinedChunks.split("\n");
+  const combinedChunks = buffer.join("");
+  const chunks = combinedChunks.split("\n");
 
   let chunkAccumulator = "";
 
@@ -48,6 +61,9 @@ function processChunks(buffer, seenChunks, onData) {
     }
 
     if (chunk !== "" && chunk !== undefined) {
+      if (seenChunks.has(chunk)) {
+        continue; // Skip duplicate chunks
+      }
       seenChunks.add(chunk);
       chunkAccumulator += chunk;
 
@@ -57,11 +73,11 @@ function processChunks(buffer, seenChunks, onData) {
         chunkAccumulator.includes("p") &&
         chunkAccumulator.includes("r")
       ) {
-        return false;
+        return false; // Stop streaming
       }
 
       try {
-        let chunkObj = JSON.parse(chunk);
+        const chunkObj = JSON.parse(chunk);
 
         if (chunkObj.choices) {
           let content = chunkObj.choices[0]?.delta?.content || "";
