@@ -16,7 +16,7 @@
   "scripts": {
     "prettier:format": "npx prettier --write .",
     "prettier:check": "npx prettier --check .",
-    "test": "node --test"
+    "test": "node --test tests/*.test.js"
   },
   "repository": {
     "type": "git",

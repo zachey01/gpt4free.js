@@ -1,17 +1,14 @@
 "use strict";
-import Provider from "./provider.js";
-import baseHeaders from "../../Utils/baseHeaders.js";
-import startStreaming from "../../Utils/stream.js";
+import ChatCompletionProvider from "./baseChatCompletionProvider.js";
+import { request } from "../../utils/fetch.js";
+import startStreaming from "../../utils/stream.js";
 
-class OllamaProvider extends Provider {
+class OllamaProvider extends ChatCompletionProvider {
   async chatCompletion(messages, options, onData) {
     try {
-      const response = await fetch(
+      const response = await request(
         `${options.ollama_url || "http://localhost:11434"}/api/chat`,
         {
-          headers: baseHeaders(
-            `${options.ollama_url || "http://localhost:11434"}`
-          ),
           body: JSON.stringify({
             messages: messages,
             stream: options.stream || false,
@@ -34,6 +31,16 @@ class OllamaProvider extends Provider {
     } catch (error) {
       console.error("Error fetching data:", error.message);
     }
+  }
+
+  static getConfig() {
+    return {
+      supportedModels: ["All from https://ollama.com/library"],
+      isWorking: true,
+      supportsStreaming: true,
+      supportsHistory: true,
+      supportsSystemPrompt: true,
+    };
   }
 }
 
