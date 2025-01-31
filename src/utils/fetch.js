@@ -7,8 +7,6 @@ export const request = async (url, options) => {
     "accept-language": "ru,en;q=0.9",
     "content-type": "application/json",
     priority: "u=1, i",
-    "sec-ch-ua":
-      '"Chromium";v="124", "YaBrowser";v="24.6", "Not-A.Brand";v="99", "Yowser";v="2.5"',
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": '"Windows"',
     plugins: "0",
