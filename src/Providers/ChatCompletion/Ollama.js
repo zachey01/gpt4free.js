@@ -29,17 +29,18 @@ class OllamaProvider extends ChatCompletionProvider {
         return responseData.message.content;
       }
     } catch (error) {
-      console.error("Error fetching data:", error.message);
+      console.error("Error with Ollama provider:", error.message);
     }
   }
 
   static getConfig() {
     return {
-      supportedModels: ["All from https://ollama.com/library"],
       isWorking: true,
+      supportedModels: ["All from https://ollama.com/library"],
       supportsStreaming: true,
       supportsHistory: true,
       supportsSystemPrompt: true,
+      customOptions: [null],
     };
   }
 }

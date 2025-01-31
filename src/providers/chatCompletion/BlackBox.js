@@ -33,21 +33,31 @@ class BlackBoxProvider extends ChatCompletionProvider {
       if (options.stream) {
         await startStreaming(response, onData);
       } else {
-        const responseData = await response.json();
-        return responseData.message.content;
+        const responseData = await response.text();
+        return responseData;
       }
     } catch (error) {
-      console.error("Error fetching data:", error.message);
+      console.error("Error with BlackBox provider:", error.message);
     }
   }
 
   static getConfig() {
     return {
-      supportedModels: ["blackbox"],
       isWorking: true,
+      supportedModels: ["blackbox"],
       supportsStreaming: false,
       supportsHistory: true,
       supportsSystemPrompt: true,
+      customOptions: [
+        "codeMode",
+        "micMode",
+        "topP",
+        "chromeExtMode",
+        "webMode",
+        "memory",
+        "imageGenerationMode",
+        "deepSearchMode",
+      ],
     };
   }
 }
